@@ -30,7 +30,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
-<!--                    <failIfNoTests>true</failIfNoTests>-->
+                    <failIfNoTests>true</failIfNoTests>
                 </configuration>
             </plugin>
 
@@ -47,29 +47,28 @@
                         </goals>
                     </execution>
 
-<!--                    <execution>-->
-<!--                        <id>check</id>-->
-<!--                        <goals>-->
-<!--                            <goal>check</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <rules>-->
-<!--                                <rule>-->
-<!--                                    <element>CLASS</element>-->
-<!--                                    <includes>-->
-<!--                                        <include>Player</include>-->
-<!--                                    </includes>-->
-<!--                                    <limits>-->
-<!--                                        <limit>-->
-<!--                                            <counter>BRANCH</counter>-->
-<!--                                            <value>COVEREDRATIO</value>-->
-<!--                                            <minimum>100%</minimum>-->
-<!--                                        </limit>-->
-<!--                                    </limits>-->
-<!--                                </rule>-->
-<!--                            </rules>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
+                    <execution>
+                        <id>check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <includes>
+                                <include>**/Game.class</include>
+                            </includes>
+                            <rules>
+                                <rule>
+                                    <limits>
+                                        <limit>
+                                            <counter>BRANCH</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>100%</minimum>
+                                        </limit>
+                                    </limits>
+                                </rule>
+                            </rules>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
